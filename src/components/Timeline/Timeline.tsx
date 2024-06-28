@@ -17,6 +17,7 @@ const timeline_info = [
     title: '11:20 - Регистрация',
     description: ['Дворец Бракосочетания №1, Английская набережная, д. 28 💍', 'Чтобы не пропустить торжество - лучше приходить заранее, минут за 20 ⌛️'],
     map: true,
+    mapY: ``,
     svg_name: 'wedding-rings',
     line: true
   },
@@ -33,6 +34,7 @@ const timeline_info = [
     title: '15:30 - Welcome фуршет',
     description: ['Банкетный зал «Кирочный двор», Кирочная ул. д. 36Б 🥂'],
     map: true,
+    mapY: ``,
     svg_name: 'cheers',
     line: true
   },
@@ -63,8 +65,13 @@ const timeline_info = [
 
 ]
 export default function Timeline() {
+
+
+
+
+  
   return (
-    <section className="timeline">
+    <section id='timeline' className="timeline">
       <h2>Программа свадебного дня</h2>
       <div className="timeline-wrapper">
 

@@ -1,7 +1,7 @@
 import './wishes.scss'
 export default function Wishes() {
   return (
-    <section className="wishes">
+    <section id='wishes' className="wishes">
       <h2>Пожелания</h2>
 
       <div className="wishes--cards">

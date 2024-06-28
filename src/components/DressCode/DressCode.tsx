@@ -26,7 +26,7 @@ const dressCodeInfo = [
 export default function DressCode() {
   const [isMen, setIsMen] = useState(true)
   return (
-    <section className="dress_code">
+    <section id='dress_code' className="dress_code">
       <h2>Дресс-код</h2>
       <p>Мы очень стараемся сделать наш праздник красивым и интересным!Безусловно, присутствие таких классных и красивых людей автоматически делает праздник прекрасным. Но мы были бы очень рады, если каждый внёс бы свою лепту и поддержал цветовую гамму нашей свадьбы:</p>
 

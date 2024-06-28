@@ -27,7 +27,7 @@ export default function Intro({ activeOverlay }: OverlayProps) {
   }, [activeOverlay])
 
   return (
-    <section className="intro">
+    <section id="intro" className="intro">
       <div className="intro--title">
         <h2>Артём и Владислава</h2>
         <p className="date">30.08.2024</p>

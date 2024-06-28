@@ -1,5 +1,6 @@
 .navigation {
   padding: 46px 0 60px;
+
   ul {
     max-width: 1200px;
     margin: 0 auto;
@@ -10,13 +11,18 @@
     margin-top: 40px;
 
     li {
-      font-family: var(--font-family);
-      font-weight: 400;
-      font-size: 20px;
-      color: #000;
 
-      &.active {
-        color: #fb84ee;
+
+
+      button {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 20px;
+        color: #000;
+        background: rgba(0, 0, 0, 0);
+        &.active {
+          color: #fb84ee;
+        }
       }
     }
   }

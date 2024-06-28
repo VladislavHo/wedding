@@ -2,7 +2,7 @@ import "./qa.scss"
 
 export default function QA() {
   return (
-    <section className='qa'>
+    <section id="qa" className='qa'>
       <h2>По всем вопросам</h2>
 
 

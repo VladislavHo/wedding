@@ -1,7 +1,7 @@
 import './invitation.scss'
 export default function Invitation() {
   return (
-    <section className='invitation'>
+    <section id='invitation' className='invitation'>
       <h2>Кажется, свадьба намечается...</h2>
       <div className="invitation-wrapper">
         <h4>Дорогой, Даня!</h4>

@@ -12,6 +12,12 @@
       justify-content: flex-start;
       gap: 60px;
       padding-bottom: 64px;
+      opacity: 0;
+      transition: 2s ease;
+      &.active {
+        opacity: 1;
+        transition: 2s ease;
+      }
       &-line {
         width: 50px;
         display: flex;
@@ -70,7 +76,7 @@
           border-radius: 20px;
           width: 240px;
           height: 120px;
-          background: #d9d9d9;
+          overflow: hidden;
         }
       }
     }

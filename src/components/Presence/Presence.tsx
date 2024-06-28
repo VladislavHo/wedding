@@ -2,7 +2,7 @@ import "./presence.scss"
 
 export default function Presence() {
   return (
-    <section className="presence">
+    <section id="presence" className="presence">
       <h2>Подтведить присутствие</h2>
 
 

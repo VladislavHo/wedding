@@ -2,7 +2,7 @@ import './story.scss'
 
 export default function Story() {
   return (
-    <section className="story">
+    <section id='story' className="story">
       <h2>Love Story</h2>
       <div className="story-wrapper">
         <div className="story-wrapper--couples">
