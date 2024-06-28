@@ -5,8 +5,12 @@ section{
 }
 button{
   cursor: pointer;
+  border: none;
+  outline: none;
 }
-a{}
+a{
+  text-decoration: none;
+}
 li{
   list-style: none;
 }

@@ -20,7 +20,7 @@ export default function Wishes() {
         {/* 2 */}
         <div className="wishes--cards--card">
           <div className="wishes--cards--card-bg">
-            <img src="./img/kittens.png" alt="img" />
+            <img src="./img/flowers.png" alt="img" />
           </div>
           <div className="wishes--cards--card--info">
             <h6>А цветы?</h6>

@@ -1,0 +1,39 @@
+.presence {
+  max-width: 1680px;
+  height: 70vh;
+  margin: 0 auto;
+  padding-top: 60px;
+
+  border-bottom: 2px solid #d9d9d9;
+  &--btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    padding-top: 120px;
+    &--yes {
+      background: #9369b8;
+      padding: 20px 85px;
+  
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 32px;
+      text-align: center;
+      color: #fff;
+
+      border-radius: 40px;
+    }
+
+    &--no {
+      padding: 11px 23px;
+  
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 32px;
+      text-align: center;
+      background: #d9d9d9;
+
+      border-radius: 40px;
+    }
+  }
+}

@@ -1,13 +1,42 @@
-.wishes{
+.wishes {
   padding: 60px 0 60px;
   background-color: #ffeefc;
-  &--cards{
-    max-width: 695px;
+
+  &--cards {
+    // max-width: 695px;
+    max-width: 965px;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    &--card{
+    gap: 60px;
+
+    
+    &--card {
       display: flex;
-      
+      gap: 60px;
+      margin: 0 auto;
+    }
+
+    &--card-bg {}
+
+    &--card--info {
+      max-width: 665px;
+      h6 {
+        font-family: var(--third-family);
+        font-weight: 400;
+        font-size: 24px;
+        color: #000;
+        padding-bottom: 30px;
+      }
+
+      p {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 240%;
+        color: #000;
+      }
     }
   }
 }
