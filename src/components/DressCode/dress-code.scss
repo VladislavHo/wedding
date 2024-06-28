@@ -1,0 +1,64 @@
+.dress_code {
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 60px 0;
+  border-bottom: 1px solid #d9d9d9;
+  p {
+    max-width: 840px;
+    margin: 0 auto;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 240%;
+    text-align: center;
+    color: #000;
+  }
+  .switch--btn{
+    // width: 200px;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+    button{
+      width: 200px;
+      display: flex;
+    }
+  }
+  &--info {
+    .color--list {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      .color {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+      }
+    }
+
+    &-desc {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 60px 0;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 240%;
+      text-align: center;
+      color: #000;
+    }
+
+    &-img {
+      max-width: 840px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 60px;
+
+    }
+
+  }
+}

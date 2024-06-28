@@ -1,0 +1,77 @@
+.hashtag {
+  padding: 60px 0 60px;
+  h2 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+    color: #9369b8;
+  }
+
+  &--info {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 60px 0;
+
+    p {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 240%;
+      text-align: center;
+      color: #000;
+    }
+  }
+
+  .social-network--links {
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .link {
+      width: 240px;
+      height: 60px;
+
+      a {
+        border-radius: 30px;
+        width: 240px;
+        height: 60px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+        h6 {
+          font-family: var(--font-family);
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 240%;
+          text-align: center;
+          color: #fff;
+        }
+
+        &.vk--link {
+          background: #9369b8;
+        }
+
+        &.inst--link {
+          background: #fb84ee;
+          gap: 10px;
+        }
+      }
+
+      .subtext {
+        padding-top: 13px;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 12px;
+        text-align: center;
+        color: #616161;
+      }
+    }
+  }
+}

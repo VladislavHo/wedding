@@ -1,5 +1,8 @@
 .story {
+  max-width: 1680px;
   padding: 60px 0;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 0 auto;
   &-wrapper {
     &--couples {
       padding-bottom: 60px;
