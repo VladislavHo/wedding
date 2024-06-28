@@ -1,7 +1,10 @@
+@import './assets/fonts/Kindentosca/Kindentosca.scss';
+@import './assets/fonts/Inter/inter.scss';
+
 :root {
   --font-family: "Google Sans", sans-serif;
   --second-family: "Kindentosca", sans-serif;
-  --third-family: "Inter", sans-serif;
+  --third-family: "Inter", serif;
 }
 
 *{

@@ -1,7 +1,45 @@
-.intro{
+
+
+.intro {
   background-image: url("../../../public/img/intro.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  height: 100vh;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  &--title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 120px;
+    h2 {
+      font-family: var(--second-family);
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-size: 96px;
+      color: #fff;
+      // font-style: italic;
+    }
+
+    p {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 60px;
+      text-align: center;
+      color: #cd8eff;
+      padding-bottom: 20px;
+    }
+
+    button {
+
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      outline: none;
+    }
+  }
 
 }
