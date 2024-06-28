@@ -1,0 +1,29 @@
+.story {
+  padding: 60px 0;
+  &-wrapper {
+    &--couples {
+      padding-bottom: 60px;
+      p {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 240%;
+        text-align: center;
+        color: #000;
+      }
+    }
+
+    &--photos {
+      max-width: 930px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      img {
+
+        object-fit: cover;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@mixin title() {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 60px;
+  text-align: center;
+  color: #9369b8;
+  padding-bottom: 33px;
+}

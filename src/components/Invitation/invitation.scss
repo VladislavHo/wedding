@@ -1,0 +1,37 @@
+.invitation {
+  width: 100%;
+  position: relative;
+  background: #ffeefc;
+  padding: 60px 0;
+
+  &-wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // gap: 40px;
+
+    h4 {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 200%;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      text-align: center;
+      color: #000;
+    }
+
+    p {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 200%;
+      text-decoration-skip-ink: none;
+      text-align: center;
+      color: #000;
+    }
+  }
+}
