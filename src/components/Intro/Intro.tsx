@@ -32,7 +32,7 @@ export default function Intro({ activeOverlay }: OverlayProps) {
         <h2>Артём и Владислава</h2>
         <p className="date">30.08.2024</p>
         <button onClick={handlePlayPause} className="volume-logo">
-          <img src="./svg/Volume.svg" alt="icon" />
+          <img src={isPlaying ? "./svg/sound-on.svg" : "./svg/sound-off.svg"} alt="icon" />
         </button>
         <audio ref={audioRef} controls={false}>
           <source src={myAudioFile} type="audio/mpeg" />
