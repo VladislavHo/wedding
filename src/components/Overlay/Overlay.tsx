@@ -18,14 +18,14 @@ export default function Overlay({ activeOverlay, setActiveOverlay }: OverlayProp
 
             <img src="./svg/logo.svg" alt="logo" />
 
-      
+
           </div>
 
           <div className="accept-btn">
             <button onClick={() => setActiveOverlay(false)}>
               Принять
               <img src="./svg/message.svg" alt="svg" />
-               </button>
+            </button>
           </div>
         </div>
 

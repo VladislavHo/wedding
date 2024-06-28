@@ -1,24 +1,30 @@
 .overlay {
   position: absolute;
+  transition: .7s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 60px;
+  position: fixed;
+  backdrop-filter: blur(30px);
   opacity: 0;
-  transition: .5s ease;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  // width: 100%;
+  // height: 100%;
+
   &.active {
-    position: fixed;
-    padding: 60px;
     // top: 0;
     // left: 0;
-    width: 100%;
-    height: 100%;
 
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(30px);
+
+
+
     opacity: 1;
+
 
   }
 
@@ -31,6 +37,11 @@
     // background-color: rgba(0, 0, 0, 0.5);
 
     border: 5px solid #ffffff69;
+
+
+    &.active {
+
+    }
 
     .overlay--wrapper {
       display: flex;
@@ -79,6 +90,7 @@
       .accept-btn {
         display: flex;
         justify-content: center;
+
         button {
           display: flex;
           justify-content: center;
