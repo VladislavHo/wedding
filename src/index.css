@@ -4,7 +4,7 @@
 :root {
   --font-family: "Google Sans", sans-serif;
   --second-family: "Kindentosca", sans-serif;
-  --third-family: "Inter", serif;
+  --third-family: "Inter", sans-serif;
 }
 
 *{
