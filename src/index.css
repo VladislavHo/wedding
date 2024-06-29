@@ -14,4 +14,23 @@
   /* outline: 1px solid green; */
 }
 
+body {}
+
+
+body::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: rgba(167, 120, 205, 0.242);
+ ;
+}
+
+
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(167, 120, 205);
+
+  border-radius: 5px;
+  cursor: pointer
+
+}
 
