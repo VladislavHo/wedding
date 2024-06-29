@@ -25,11 +25,11 @@ export default function Intro({ activeOverlay }: OverlayProps) {
 
 
 
-  // useEffect(()=>{
-  //   if(!activeOverlay){
-  //     audioRef.current?.play();
-  //   }
-  // }, [activeOverlay])
+  useEffect(()=>{
+    if(!activeOverlay){
+      audioRef.current?.play();
+    }
+  }, [activeOverlay])
 
   return (
     <section id="intro" className="intro">

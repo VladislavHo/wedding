@@ -3,10 +3,12 @@ interface DressCodeWrapperProps {
   color: string[];
   imgName: string[];
   description: string;
+  isMen: boolean
 }
-function DressCodeWrapper({ color, description, imgName }: DressCodeWrapperProps) {
+function DressCodeWrapper( {isMen, ...props}:DressCodeWrapperProps) {
+  const { color, imgName, description } = props
   return (
-    <div className="dress_code--info">
+    <div className={`dress_code--info ${isMen ? 'active' : ''}`}>
       <div className="color--list">
         {color.map((item: string, index: number) =>
           <div

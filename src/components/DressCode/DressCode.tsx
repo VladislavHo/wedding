@@ -31,14 +31,29 @@ export default function DressCode() {
       <p>Мы очень стараемся сделать наш праздник красивым и интересным!Безусловно, присутствие таких классных и красивых людей автоматически делает праздник прекрасным. Но мы были бы очень рады, если каждый внёс бы свою лепту и поддержал цветовую гамму нашей свадьбы:</p>
 
       <div className="switch--btn">
-        <button onClick={() => setIsMen(!isMen)}>
+        <button className={!isMen ? 'active' : ''} onClick={() => setIsMen(false)}>
           <p>Леди</p>
-          <p>Джкнтельмен</p>
+
         </button>
+
+        <button className={isMen ? 'active' : ''} onClick={() => setIsMen(true)}>
+
+          <p>Джентельмен</p>
+
+        </button>
+
       </div>
 
-      {isMen
-        ? <DressCodeWrapper {...dressCodeInfo[1]} /> : <DressCodeWrapper {...dressCodeInfo[0]} />}
+      {/* {isMen
+        ? <DressCodeWrapper {...dressCodeInfo[1]} /> : <DressCodeWrapper {...dressCodeInfo[0]} />} */}
+
+
+      <div className="slider">
+
+        <DressCodeWrapper isMen={!isMen} {...dressCodeInfo[1]} />
+        <DressCodeWrapper isMen={isMen} {...dressCodeInfo[0]} />
+
+      </div>
 
     </section>
   )
