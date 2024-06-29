@@ -1,0 +1,58 @@
+.button-up {
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  right: 10px;
+  bottom: 0;
+  z-index: 100;
+  opacity: 0;
+  transition: .5s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    transition: .5s ease-in-out;
+  }
+
+  button {
+
+    width: 5rem;
+    height: 5rem;
+    border-radius: 20px 20px 0 0;
+    background-color: rgba(167, 120, 205, 0.696);
+    color: #000;
+    -webkit-box-shadow: 0px -4px 24px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -4px 24px -12px rgba(0,0,0,0.75);
+    box-shadow: 0px -4px 24px -12px rgba(0,0,0,0.75);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 50%;
+      border-radius: 5px;
+      background-color: #fff;
+      top: 15px;
+
+
+    }
+
+    &::after {
+      // bottom: 0;
+      right: 23px;
+      rotate: -45deg
+    }
+
+    &::before {
+      left: 23px;
+      rotate: 45deg;
+      // bottom: auto;
+    }
+  }
+
+
+}

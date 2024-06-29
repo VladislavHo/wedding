@@ -1,15 +1,19 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import myAudioFile from "../../assets/audio/intro.mp3";
 import "./intro.scss"
 
 type OverlayProps = {
   activeOverlay: boolean;
+
+
 }
+
 
 
 export default function Intro({ activeOverlay }: OverlayProps) {
   const [isPlaying, setIsPlaying] = useState(true);
   const audioRef = useRef<HTMLAudioElement>(null);
+
   const handlePlayPause = () => {
     if (isPlaying) {
       audioRef.current?.pause();
@@ -18,6 +22,7 @@ export default function Intro({ activeOverlay }: OverlayProps) {
     }
     setIsPlaying(!isPlaying);
   };
+
 
 
   useEffect(()=>{

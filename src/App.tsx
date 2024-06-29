@@ -20,47 +20,31 @@ import Story from './components/Story/Story'
 import Timeline from './components/Timeline/Timeline'
 import Timer from './components/Timer/Timer'
 import Wishes from './components/Wishes/Wishes'
+
 // import { Cookies } from 'react-cookie';
 import './App.scss'
+import ButtonUp from './components/Buttons/ButtonUp/ButtonUp'
 
 function App() {
   const [activeOverlay, setActiveOverlay] = useState(true)
-  // const [overlayCookie, setOverlayCookie] = useState(false)
-
-
-  // const cookies = new Cookies();
+  const [stateButtonUp, setStateButtonUp] = useState(false)
 
   useEffect(() => {
 
     document.body.style.overflow = activeOverlay ? 'hidden' : 'auto';
 
 
-      // cookies.set('activeOverlay', activeOverlay, { path: '/' });
-    
-
-
-
   }, [activeOverlay])
-
-  // useEffect(() => {
-  //   if (cookies.get('activeOverlay')) {
-
-  //     document.body.style.overflow = 'auto';
-
-  //     setActiveOverlay(false)
-
-  //     setOverlayCookie(true)
-  //   }
-  // }, [])
-
 
   return (
     <>
+
       {<Overlay activeOverlay={activeOverlay} setActiveOverlay={setActiveOverlay} />}
-      {/* <Overlay activeOverlay={activeOverlay} setActiveOverlay={setActiveOverlay} /> */}
+
       <Intro activeOverlay={activeOverlay} />
 
-      <Timer />
+
+      <Timer  setStateButtonUp={setStateButtonUp} />
       <Navigation />
       <Invitation />
       <Story />
@@ -72,6 +56,7 @@ function App() {
       <QA />
       <Footer />
 
+      <ButtonUp stateButtonUp={stateButtonUp} />
 
     </>
   )

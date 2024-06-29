@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import {  useState } from 'react';
+
 import './navigation.scss'
 
 
 
 
 export default function Navigation() {
+
+
+
+
   const [navigation, setNavigation] = useState([
     {
       name: 'Love Story',
@@ -40,6 +45,9 @@ export default function Navigation() {
 
 
 
+
+
+
   const handler = (idName: string) => {
     setNavigation(navigation)
     const section = document.getElementById(idName);
@@ -48,16 +56,17 @@ export default function Navigation() {
     }
   };
 
-return (
-  <section className="navigation">
-    <h2>Навигация</h2>
-    <ul>
-      {navigation.map((item) => (
-        <li  key={item.name}>
-          <button onClick={() => handler(item.idName)}>{item.name}</button>
-        </li>
-      ))}
-    </ul>
-  </section>
-)
+  return (
+    <section  id="navigation" className="navigation">
+      <h2>Навигация</h2>
+      <ul>
+        {navigation.map((item) => (
+          <li key={item.name}>
+            <button onClick={() => handler(item.idName)}>{item.name}</button>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
 }
+

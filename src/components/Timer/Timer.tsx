@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react"
+import { useInView } from "react-intersection-observer"
 import "./timer.scss"
 
-export default function Timer() {
+type TimerProps = {
+
+  setStateButtonUp: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export default function Timer({ setStateButtonUp }: TimerProps) {
   // Например до 30 августа 2024года
   const targetDate = new Date(2024, 7, 30).getTime()
-  // const [days, setDays] = useState(0);
-  // const [hours, setHours] = useState(0);
-  // const [minutes, setMinutes] = useState(0);
-  // const [seconds, setSeconds] = useState(0);
+
 
   const [dateCounter, setDateCounter] = useState({
     days: 0,
@@ -15,6 +18,21 @@ export default function Timer() {
     minutes: 0,
     seconds: 0
   })
+  const { ref, inView, entry } = useInView({
+    threshold: 1
+  })
+
+  useEffect(() => {
+    if (entry && entry.intersectionRect) {
+
+
+      if ((entry.intersectionRect.top * 2) <= 0) {
+        setStateButtonUp(true)
+      } else {
+        setStateButtonUp(false)
+      }
+    }
+  }, [inView]);
 
 
   useEffect(() => {
@@ -38,7 +56,7 @@ export default function Timer() {
   }, [targetDate]);
 
   return (
-    <section className="timer">
+    <section ref={ref} className="timer">
       <div className="timer-wrapper">
         <div className="timer-wrapper--counter">
           <p>{dateCounter.days}</p>
