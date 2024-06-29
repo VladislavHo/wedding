@@ -1,14 +1,18 @@
-import {  useState } from 'react';
+import { useState } from 'react';
 
 import './navigation.scss'
+
+
+interface NavigationItem {
+  name: string;
+  active: boolean;
+  idName: string;
+}
 
 
 
 
 export default function Navigation() {
-
-
-
 
   const [navigation, setNavigation] = useState([
     {
@@ -48,21 +52,24 @@ export default function Navigation() {
 
 
 
-  const handler = (idName: string) => {
-    setNavigation(navigation)
-    const section = document.getElementById(idName);
+  const handler = (item: NavigationItem) => {
+
+    // setNavigation((prev) => prev.map((el) => ({ ...el, active: false})));
+    setNavigation((prev) => prev.map((el) => ({ ...el, active: el.name === item.name })));
+
+    const section = document.getElementById(item.idName);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <section  id="navigation" className="navigation">
+    <section id="navigation" className="navigation">
       <h2>Навигация</h2>
       <ul>
         {navigation.map((item) => (
           <li key={item.name}>
-            <button onClick={() => handler(item.idName)}>{item.name}</button>
+            <button className={item.active ? 'active' : ''} onClick={() => handler(item)}>{item.name}</button>
           </li>
         ))}
       </ul>

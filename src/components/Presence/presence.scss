@@ -1,6 +1,6 @@
 .presence {
   max-width: 1680px;
-  height: 70vh;
+  // height: 70vh;
   margin: 0 auto;
   padding-top: 60px;
 
@@ -29,8 +29,9 @@
   
       font-family: var(--font-family);
       font-weight: 400;
-      font-size: 32px;
+      font-size: 20px;
       text-align: center;
+      color: #616161;
       background: #d9d9d9;
 
       border-radius: 40px;
