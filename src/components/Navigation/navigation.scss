@@ -20,8 +20,14 @@
         font-size: 20px;
         color: #000;
         background: rgba(0, 0, 0, 0);
+        transition: .5s ease;
         &.active {
           color: #fb84ee;
+        }
+
+        &:hover {
+          color: #fb84ee;
+          transition: .5s ease;
         }
       }
     }

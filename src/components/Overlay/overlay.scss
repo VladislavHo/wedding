@@ -9,20 +9,10 @@
   padding: 60px;
   backdrop-filter: blur(30px);
   opacity: 0;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
-  // width: 100%;
-  // height: 100%;
   z-index: 0;
+
   &.active {
     position: fixed;
-    
-    // top: 0;
-
-    // left: 0;
-
-
     z-index: 11;
     opacity: 1;
 
@@ -35,14 +25,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // background-color: rgba(0, 0, 0, 0.5);
-    
     border: 5px solid #ffffff69;
     position: relative;
-    
-    &.active {
 
-    }
+    &.active {}
 
     .overlay--wrapper {
       display: flex;
@@ -106,6 +92,14 @@
           font-size: 40px;
           color: #fff;
           background: #9369b8;
+          outline: 1px solid #9369b8;
+          transition: .5s ease;
+
+          &:hover {
+            background: #7f5b9f;
+            outline: 1px solid #fff;
+            transition: .5s ease;
+          }
         }
       }
     }

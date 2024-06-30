@@ -27,6 +27,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .5s ease-in-out;
+    &:hover {
+      background-color: #9369b8;
+      transition: .5s ease-in-out;
+    }
 
     &::after,
     &::before {

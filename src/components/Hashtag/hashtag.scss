@@ -67,11 +67,23 @@
 
         &.vk--link {
           background: #9369b8;
+          transition: .5s ease-in-out;
+          &:hover {
+            background-color: #7f5b9f;
+            
+            transition: .5s ease-in-out;
+          }
         }
-
+        
         &.inst--link {
           background: #fb84ee;
           gap: 10px;
+          transition: .5s ease-in-out;
+          &:hover {
+            background-color: #dc77d1;
+
+            transition: .5s ease-in-out;
+          }
         }
       }
 

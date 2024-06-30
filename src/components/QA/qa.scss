@@ -48,6 +48,11 @@
             height: 40px;
             border-radius: 50%;
             background-color: #9369b8;
+            transition: .5s ease-in-out;
+            &:hover{
+              background-color: #7f5b9f;
+              transition: .5s ease-in-out;
+            }
 
             a{
               width: 100%;
