@@ -101,6 +101,13 @@
         font-size: 20px;
         text-align: center;
         color: #fff;
+
+        transition: .5s ease;
+
+        &:hover {
+          background: #7f5b9f;
+          transition: .5s ease;
+        }
       }
 
       .btn--back {
@@ -112,6 +119,13 @@
         font-size: 20px;
         text-align: center;
         color: #fff;
+
+        transition: .5s ease;
+
+        &:hover {
+          background: #c2c2c2;
+          transition: .5s ease;
+        }
       }
     }
   }
