@@ -24,36 +24,40 @@ const dressCodeInfo = [
 
 
 export default function DressCode() {
-  const [isMen, setIsMen] = useState(true)
+  const [isMen, setIsMen] = useState(false)
   return (
     <section id='dress_code' className="dress_code">
-      <h2>Дресс-код</h2>
-      <p>Мы очень стараемся сделать наш праздник красивым и интересным!Безусловно, присутствие таких классных и красивых людей автоматически делает праздник прекрасным. Но мы были бы очень рады, если каждый внёс бы свою лепту и поддержал цветовую гамму нашей свадьбы:</p>
+      <img className='dress_code--img' src="./img/branch-2.png" alt="img" />
+      <div className="dress_code--wrapper">
+        <h2>Дресс-код</h2>
+        <p>Мы очень стараемся сделать наш праздник красивым и интересным!Безусловно, присутствие таких классных и красивых людей автоматически делает праздник прекрасным. Но мы были бы очень рады, если каждый внёс бы свою лепту и поддержал цветовую гамму нашей свадьбы:</p>
 
-      <div className="switch--btn">
-        <button className={!isMen ? 'active' : ''} onClick={() => setIsMen(false)}>
-          <p>Леди</p>
+        <div className="switch--btn">
+          <button className={!isMen ? 'active' : ''} onClick={() => setIsMen(false)}>
+            <p>Леди</p>
 
-        </button>
+          </button>
 
-        <button className={isMen ? 'active' : ''} onClick={() => setIsMen(true)}>
+          <button className={isMen ? 'active' : ''} onClick={() => setIsMen(true)}>
 
-          <p>Джентельмен</p>
+            <p>Джентельмен</p>
 
-        </button>
+          </button>
 
-      </div>
+        </div>
 
-      {/* {isMen
+        {/* {isMen
         ? <DressCodeWrapper {...dressCodeInfo[1]} /> : <DressCodeWrapper {...dressCodeInfo[0]} />} */}
 
 
-      <div className="slider">
+        <div className="slider">
 
-        <DressCodeWrapper isMen={!isMen} {...dressCodeInfo[1]} />
-        <DressCodeWrapper isMen={isMen} {...dressCodeInfo[0]} />
+          <DressCodeWrapper isMen={!isMen} {...dressCodeInfo[1]} />
+          <DressCodeWrapper isMen={isMen} {...dressCodeInfo[0]} />
 
+        </div>
       </div>
+
 
     </section>
   )

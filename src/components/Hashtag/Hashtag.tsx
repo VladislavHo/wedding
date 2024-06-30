@@ -2,6 +2,7 @@ import './hashtag.scss'
 export default function Hashtag() {
   return (
     <section id='hashtag' className="hashtag">
+      <img className='hashtag--img' src="./img/branch-2.png" alt="img" />
       <h2>#AHAHAHAHHAHAHA:(</h2>
       <div className="hashtag--info">
         <p>Делитесь фотографиями, рилсами и любыми другими лучшими моментами в социальных сетях, добавляя этот хештег!</p>

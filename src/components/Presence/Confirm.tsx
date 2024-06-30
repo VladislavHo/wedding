@@ -7,7 +7,7 @@ const options = [
   {
     id: "1",
     label: "Буду присутствовать весь свадебный день",
-    active: true
+    active: false
   },
   {
     id: "2",
@@ -24,7 +24,9 @@ const options = [
 type PresenceState = {
   stateForm: boolean;
   button: boolean;
-  present: boolean
+  present: boolean;
+  presentYes: boolean;
+  answerUser: boolean
 };
 
 type PresenceProps = {
@@ -36,13 +38,23 @@ export default function Confirm({ presentState, setPresentState }: PresenceProps
   const [optionsLabel, setOptionsLabel] = useState(options)
 
   console.log();
-  
+
   return (
     <div className={`confirm ${presentState.stateForm ? "active" : ""}`}>
 
 
       {presentState.present ? (
-        <form action="">
+        <form action="" onSubmit={(e) => {
+          e.preventDefault()
+          setPresentState((prev) => (
+            {
+              ...prev,
+              presentYes: true,
+              answerUser: true,
+              stateForm: false,
+              button: false
+            }));
+        }}>
 
 
           {optionsLabel.map(option => (
@@ -52,20 +64,21 @@ export default function Confirm({ presentState, setPresentState }: PresenceProps
                 onChange={() => setOptionsLabel((prev) => prev.map((el) => ({ ...el, active: option.id === el.id })))}
                 value={option.id}
                 checked={option.active}
-                name="radio" />
+                name="radio"
+                required />
               <div className={`checkbox ${option.active ? "active" : ""}`}></div>
               <p className={option.active ? "active" : ""}>{option.label}</p>
             </label>
           ))}
 
           <div className="textarea-wrapper">
-            <textarea name="" id="" placeholder='Всё, что вы так хотели сказать, но стеснялись '></textarea>
+            <textarea required name="" id="" placeholder='Всё, что вы так хотели сказать, но стеснялись '></textarea>
 
           </div>
 
           <div className="confirm--btn">
 
-            <button className='btn' >Подтвердить</button>
+            <button className='btn'>Подтвердить</button>
             <button typeof='button' className='btn--back' onClick={(e) => {
               e.preventDefault()
               setPresentState((prev) => ({ ...prev, stateForm: false, button: true }));
@@ -73,9 +86,19 @@ export default function Confirm({ presentState, setPresentState }: PresenceProps
           </div>
         </form>
       ) : (
-        <form action="">
+        <form action="" onSubmit={(e) => {
+          e.preventDefault()
+          setPresentState((prev) => (
+            {
+              ...prev,
+              presentYes: true,
+              answerUser: false,
+              stateForm: false,
+              button: false
+            }));
+        }}>
           <div className="textarea-wrapper">
-            <textarea name="" id="" placeholder='Всё, что вы так хотели сказать, но стеснялись '></textarea>
+            <textarea required name="" id="" placeholder='По какой причине не сможете присутствовать?'></textarea>
 
           </div>
 

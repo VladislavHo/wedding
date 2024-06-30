@@ -6,8 +6,9 @@ export default function Presence() {
   const [presentState, setPresentState] = useState({
     stateForm: false,
     button: true,
-    present: true
-
+    present: true,
+    answerUser: false,
+    presentYes: false
   })
 
   //   setTimeout(() => {
@@ -22,25 +23,38 @@ export default function Presence() {
 
   return (
     <section id="presence" className="presence">
-      <h2>Подтведить присутствие</h2>
+      <img src="./img/branch.png" alt="img" />
+      <img src="./img/branch.png" alt="img" />
+      <div className="presence--wrapper">
+        {/* <h2>Подтведить присутствие</h2> */}
+        <h2>{
+          !presentState.presentYes ?
+            "Подтвердите присутствие" :
+            `${presentState.answerUser ? "До встречи!" : "Очень жаль!"}`
+        }</h2>
 
 
-      {presentState.button && (
-        <div className={`presence--btn ${presentState ? "active" : ""}`} >
-          <button className="presence--btn--yes" onClick={() => {
+
+
+
+        <div className={`presence--btn ${presentState.button ? "active" : ""}`} >
+          <button disabled={!presentState.button} className="presence--btn--yes" onClick={() => {
             setPresentState((prev) => ({ ...prev, button: false, stateForm: true, present: true }));
           }}>Приду!</button>
-          <button className="presence--btn--no" onClick={() => {
+          <button disabled={!presentState.button} className="presence--btn--no" onClick={() => {
             setPresentState((prev) => ({ ...prev, button: false, stateForm: true, present: false }));
           }}>Не приду</button>
         </div>
-      )}
 
 
 
 
 
-      <Confirm presentState={presentState} setPresentState={setPresentState} />
+
+        <Confirm presentState={presentState} setPresentState={setPresentState} />
+      </div>
+
+
 
 
 

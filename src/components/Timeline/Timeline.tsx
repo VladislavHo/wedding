@@ -69,14 +69,19 @@ export default function Timeline() {
 
 
 
-  
+
   return (
     <section id='timeline' className="timeline">
-      <h2>Программа свадебного дня</h2>
-      <div className="timeline-wrapper">
+      <img className='timeline--img' src="./img/branch-2.png" alt="img" />
+      <img className='timeline--img' src="./img/branch-2.png" alt="img" />
+      <div className="timeline--wrapper">
+        <h2>Программа свадебного дня</h2>
+        <div className="timeline--content">
 
-        {timeline_info && timeline_info.map((item) => <TImelineWrapper key={item.id} {...item} />)}
+          {timeline_info && timeline_info.map((item) => <TImelineWrapper key={item.id} {...item} />)}
+        </div>
       </div>
+
     </section>
   )
 }

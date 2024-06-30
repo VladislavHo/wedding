@@ -20,14 +20,20 @@ import Story from './components/Story/Story'
 import Timeline from './components/Timeline/Timeline'
 import Timer from './components/Timer/Timer'
 import Wishes from './components/Wishes/Wishes'
-
-// import { Cookies } from 'react-cookie';
-import './App.scss'
 import ButtonUp from './components/Buttons/ButtonUp/ButtonUp'
+import './App.scss'
 
 function App() {
   const [activeOverlay, setActiveOverlay] = useState(true)
   const [stateButtonUp, setStateButtonUp] = useState(false)
+
+
+  useEffect(() => {
+    setTimeout(() => {
+      
+      window.scrollTo(0, 0)
+    }, 250)
+  }, [])
 
   useEffect(() => {
 
@@ -44,7 +50,7 @@ function App() {
       <Intro activeOverlay={activeOverlay} />
 
 
-      <Timer  setStateButtonUp={setStateButtonUp} />
+      <Timer setStateButtonUp={setStateButtonUp} />
       <Navigation />
       <Invitation />
       <Story />

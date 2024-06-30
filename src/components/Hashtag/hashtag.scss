@@ -1,5 +1,16 @@
 .hashtag {
+  width: 100%;
+  margin: 0;
   padding: 60px 0 60px;
+  position: relative;
+  &--img {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    right: -14%;
+    rotate: 180deg;
+  }
   h2 {
     font-family: var(--font-family);
     font-weight: 400;

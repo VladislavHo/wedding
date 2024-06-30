@@ -3,7 +3,20 @@
   position: relative;
   background: #ffeefc;
   padding: 60px 0;
-
+  img{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    &:nth-child(1){
+      left: -17%;
+      transform: rotate(226deg);
+    }
+    &:nth-child(2){
+      right: -15%;
+      transform: rotate(215deg);
+    }
+  }
   &-wrapper {
     max-width: 1080px;
     margin: 0 auto;
