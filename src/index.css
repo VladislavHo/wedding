@@ -6,6 +6,14 @@
   --second-family: "Kindentosca", sans-serif;
   --third-family: "Inter", sans-serif;
   --color-violet: #9369b8;
+
+
+  
+
+  --1280px-p: "",
+  --1024px-p: "",
+  --768px-p: "",
+  --480px-p: "",
 }
 
 *{

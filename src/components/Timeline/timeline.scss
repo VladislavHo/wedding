@@ -3,7 +3,14 @@
   position: relative;
   &--img{
     position: absolute;
-
+    @media screen and (max-width: 1200px) {
+      width: 600px;
+      height: 600px;
+    }
+    @media screen and (max-width: 1024px) {
+      width: 400px;
+      height: 400px;
+    }
     &:nth-child(1){
       top: 0;
       left: -33%;
@@ -24,7 +31,9 @@
   .timeline--content{
     max-width: 860px;
     margin: 0 auto;
-
+    @media screen and (max-width: 1024px) {
+      max-width: 760px;
+    }
     .timeline--info {
       display: flex;
       justify-content: flex-start;
@@ -80,6 +89,9 @@
           font-size: 30px;
           color: #fb84ee;
           padding-bottom: 17px;
+          @media screen and (max-width: 1200px) {
+            font-size: 25px;
+          }
         }
 
         p {
@@ -88,6 +100,10 @@
           font-size: 20px;
           line-height: 240%;
           color: #000;
+          @media screen and (max-width: 1200px) {
+            font-size: 18px;
+            
+          }
         }
 
         &-map {

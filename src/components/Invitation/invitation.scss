@@ -8,13 +8,27 @@
     height: 500px;
     position: absolute;
     top: 0;
+    @media screen and (max-width: 1200px) {
+      width: 400px;
+      height: 400px;
+    }
+    @media screen and (max-width: 1024px) {
+      display: none;
+      
+    }
     &:nth-child(1){
       left: -17%;
       transform: rotate(226deg);
+      @media screen and (max-width: 1200px) {
+        left: -23%;
+      }
     }
     &:nth-child(2){
       right: -15%;
       transform: rotate(215deg);
+      @media screen and (max-width: 1200px) {
+        right: -20%;
+      }
     }
   }
   &-wrapper {
@@ -45,6 +59,9 @@
       text-decoration-skip-ink: none;
       text-align: center;
       color: #000;
+      @media screen and (max-width: 1200px) {
+          font-size: 18px;
+      }
     }
   }
 }

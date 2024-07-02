@@ -1,15 +1,25 @@
 .timer {
   max-width: 1680px;
   margin: 0 auto;
-  padding: 73px 0;
+  padding: 70px 0;
   border-bottom: 1px solid #d9d9d9;
+  @media (min-width: 768px) and (max-width: 991px) {
+    padding: 30px 0;
+  }
   &-wrapper {
     max-width: 750px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    @media screen and (max-width: 1200px) {
+      max-width: 670px;
+    }
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+      max-width: 300px;
+      gap: 20px;
+    }
     &--counter {
       display: flex;
       flex-direction: column;
@@ -20,16 +30,29 @@
       height: 154px;
       background: #a778cd;
 
+      @media screen and (max-width: 1200px) {
+        width: 140px;
+        height: 140px;
+      }
+
       p {
         font-family: var(--font-family);
         font-weight: 400;
         color: #fff;
-        &:nth-child(1){
+
+        &:nth-child(1) {
           font-size: 48px;
+          @media screen and (max-width: 1200px) {
+            font-size: 42;
+          }
 
         }
-        &:nth-child(2){
+
+        &:nth-child(2) {
           font-size: 20px;
+          @media screen and (max-width: 1200px) {
+            font-size: 18px;
+          }
         }
       }
     }

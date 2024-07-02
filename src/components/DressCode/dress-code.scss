@@ -6,24 +6,32 @@
     bottom: 0;
     left: -33%;
     rotate: 180deg;
+    @media screen and (max-width: 1280px) {
+      width: 600px;
+      height: 600px;
+    }
   }
   &--wrapper {
     max-width: 1680px;
     margin: 0 auto;
     padding: 60px 0;
     border-bottom: 2px solid #d9d9d9;
+    p.dress_code--text {
+      max-width: 840px;
+      margin: 0 auto;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 240%;
+      text-align: center;
+      color: #000;
+      @media screen and (max-width: 1280px) {
+        font-size: 18px;
+        
+      }
+    }
+  
 
-
-  }
-  p {
-    max-width: 840px;
-    margin: 0 auto;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 240%;
-    text-align: center;
-    color: #000;
   }
 
   .switch--btn {
@@ -35,6 +43,7 @@
     background: #d9d9d9;
     border-radius: 50px;
     transition: .5s ease;
+    overflow: hidden;
     &:hover{
       background: #c2c2c2;
       transition: .5s ease;
@@ -45,21 +54,39 @@
         }
       }
     }
+    &:active{
+      background: #9369b8;
+      transition: .5s ease;
+      &>button{
+        background: #9369b8;
+        &>p{
+          color: #fff;
+        }
+      }
+    }
     // overflow: hidden;
     button {
-      padding: 15px 30px;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
       background: #d9d9d9;
-      font-family: var(--font-family);
-      font-weight: 400;
-      font-size: 20px;
+
+     
       color: #000;
       cursor: pointer;
       border-radius: 50px;
 
+      padding: 15px 30px;
       transition: .5s ease;
+      .name--btn{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 20px;
+      }
+
+      
+
       &.active {
         background: #9369b8;
         p{
@@ -110,6 +137,10 @@
       line-height: 240%;
       text-align: center;
       color: #000;
+      @media screen and (max-width: 1280px) {
+        font-size: 18px;
+        
+      }
 
     }
 
@@ -120,7 +151,10 @@
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 60px;
-
+      @media screen and (max-width: 1280px) {
+        max-width: 800px;
+        gap: 40px;
+      }
     }
 
   }

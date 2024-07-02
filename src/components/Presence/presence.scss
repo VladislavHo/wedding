@@ -8,19 +8,30 @@
   z-index: 1;
 
   overflow: hidden;
-
+  // height: 100vh;
   img {
     position: absolute;
     z-index: 0;
     top: 0;
-
+    @media screen and (max-width: 1200px) {
+      width: 600px;
+      height: 600px;
+    }
     &:nth-child(1) {
       left: -25%;
+      @media screen and (max-width: 1200px) {
+        left: -30%;
+        
+      }
     }
 
     &:nth-child(2) {
       right: -25%;
       transform: rotate(180deg);
+      @media screen and (max-width: 1200px) {
+        right: -30%;
+        
+      }
     }
   }
 

@@ -30,17 +30,20 @@ export default function DressCode() {
       <img className='dress_code--img' src="./img/branch-2.png" alt="img" />
       <div className="dress_code--wrapper">
         <h2>Дресс-код</h2>
-        <p>Мы очень стараемся сделать наш праздник красивым и интересным!Безусловно, присутствие таких классных и красивых людей автоматически делает праздник прекрасным. Но мы были бы очень рады, если каждый внёс бы свою лепту и поддержал цветовую гамму нашей свадьбы:</p>
+        <p className='dress_code--text'>Мы очень стараемся сделать наш праздник красивым и интересным!Безусловно, присутствие таких классных и красивых людей автоматически делает праздник прекрасным. Но мы были бы очень рады, если каждый внёс бы свою лепту и поддержал цветовую гамму нашей свадьбы:</p>
 
         <div className="switch--btn">
           <button className={!isMen ? 'active' : ''} onClick={() => setIsMen(false)}>
-            <p>Леди</p>
+            <p className='name--btn'>
+              Леди
+            </p>
 
           </button>
 
           <button className={isMen ? 'active' : ''} onClick={() => setIsMen(true)}>
-
-            <p>Джентельмен</p>
+            <p className='name--btn'>
+              Джентельмен
+            </p>
 
           </button>
 

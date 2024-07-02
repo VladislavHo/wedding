@@ -65,6 +65,7 @@ export default function Navigation() {
 
   return (
     <section id="navigation" className="navigation">
+      <img src="./img/branch-2.png" alt="img" />
       <h2>Навигация</h2>
       <ul>
         {navigation.map((item) => (
