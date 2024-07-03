@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import "./confirm.scss"
+import fetchData from '../../api/fetchData';
 
 
 const options = [
@@ -36,8 +37,16 @@ type PresenceProps = {
 
 export default function Confirm({ presentState, setPresentState }: PresenceProps) {
   const [optionsLabel, setOptionsLabel] = useState(options)
+  const [textArea, setTextArea] = useState({
+    y: '',
+    n: ''
+  });
 
-  console.log();
+
+  useEffect(() => {
+    optionsLabel.filter((el) => el.active === true)[0]
+  }, [optionsLabel])
+
 
   return (
     <div className={`confirm ${presentState.stateForm ? "active" : ""}`}>
@@ -54,7 +63,12 @@ export default function Confirm({ presentState, setPresentState }: PresenceProps
               stateForm: false,
               button: false
             }));
+          fetchData({ options: optionsLabel.filter((el) => el.active === true)[0], textArea: textArea.y })
         }}>
+
+
+
+
 
 
           {optionsLabel.map(option => (
@@ -72,7 +86,7 @@ export default function Confirm({ presentState, setPresentState }: PresenceProps
           ))}
 
           <div className="textarea-wrapper">
-            <textarea required name="" id="" placeholder='Всё, что вы так хотели сказать, но стеснялись '></textarea>
+            <textarea required value={textArea.y} onChange={(e) => setTextArea((prev) => ({ ...prev, y: e.target.value }))} placeholder='Всё, что вы так хотели сказать, но стеснялись '></textarea>
 
           </div>
 
@@ -96,9 +110,10 @@ export default function Confirm({ presentState, setPresentState }: PresenceProps
               stateForm: false,
               button: false
             }));
+            fetchData({ options: { id: '', label: 'Не придет', active: false }, textArea: textArea.n })
         }}>
           <div className="textarea-wrapper">
-            <textarea required name="" id="" placeholder='По какой причине не сможете присутствовать?'></textarea>
+            <textarea required name="" value={textArea.n} onChange={(e) => setTextArea((prev) => ({ ...prev, n: e.target.value }))} id="" placeholder='По какой причине не сможете присутствовать?'></textarea>
 
           </div>
 
@@ -113,11 +128,6 @@ export default function Confirm({ presentState, setPresentState }: PresenceProps
         </form>
       )
       }
-
-
-
-
-
 
     </div>
   )

@@ -32,7 +32,7 @@ function App() {
     setTimeout(() => {
       
       window.scrollTo(0, 0)
-    }, 250)
+    }, 500)
   }, [])
 
   useEffect(() => {
