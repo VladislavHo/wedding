@@ -13,6 +13,7 @@
     top: 0;
     right: -14%;
     rotate: 180deg;
+    z-index: -1;
     @media screen and (max-width: 1200px) {
       width: 400px;
       height: 400px;
