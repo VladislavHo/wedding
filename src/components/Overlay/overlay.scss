@@ -10,7 +10,9 @@
   backdrop-filter: blur(30px);
   opacity: 0;
   z-index: 0;
-
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
   &.active {
     position: fixed;
     z-index: 11;
@@ -27,7 +29,9 @@
     align-items: center;
     border: 5px solid #ffffff69;
     position: relative;
-
+    @media screen and (max-width: 768px) {
+      border: 3px solid #ffffff69;
+    }
     &.active {}
 
     .overlay--wrapper {
@@ -39,6 +43,7 @@
         font-weight: 400;
         font-size: 64px;
         color: #fff;
+        text-align: center;
         @media screen and (max-width: 1200px) {
           font-size: 50px;
           
@@ -65,19 +70,27 @@
 
           width: 50%;
           height: 2px;
-          background-color: #ffffff;
+          background-color: #ffffffc4;
           z-index: -1;
           @media screen and (max-width: 768px) {
             height: 1px;
+            width: 40%;
           }
         }
 
         &::before {
           right: -13%;
+          @media screen and (max-width: 768px) {
+            right: -10%;
+          }
         }
 
         &::after {
           left: -13%;
+          @media screen and (max-width: 768px) {
+            left: -10%;
+            
+          }
         }
 
         img {
