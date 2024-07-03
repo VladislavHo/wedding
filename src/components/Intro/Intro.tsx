@@ -1,16 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import myAudioFile from "../../assets/audio/intro.mp3";
 import "./intro.scss"
-
-type OverlayProps = {
+interface IntroProps {
   activeOverlay: boolean;
-
-
 }
 
-
-
-export default function Intro({ activeOverlay }: OverlayProps) {
+export default function Intro({ activeOverlay }: IntroProps) {
   const [isPlaying, setIsPlaying] = useState(true);
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -25,11 +20,11 @@ export default function Intro({ activeOverlay }: OverlayProps) {
 
 
 
-  // useEffect(()=>{
-  //   if(!activeOverlay){
-  //     audioRef.current?.play();
-  //   }
-  // }, [activeOverlay])
+  useEffect(()=>{
+    if(!activeOverlay){
+      audioRef.current?.play();
+    }
+  }, [activeOverlay])
 
   return (
     <section id="intro" className="intro">
