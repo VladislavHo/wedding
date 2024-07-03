@@ -19,13 +19,25 @@
     }
     &:nth-child(1){
       top: 0;
-      left: -33%;
+      left: -40%;
       transform: rotate(-3deg);
+      @media screen and (max-width: 1200px) {
+        left: -30%;
+      }
+      @media screen and (max-width: 992px) {
+        left: -15%;
+      }
     }
     &:nth-child(2){
       bottom: 0;
-      right: -29%;
+      right: -40%;
       transform: rotate(191deg);
+      @media screen and (max-width: 1200px) {
+        right: -30%;
+      }
+      @media screen and (max-width: 992px) {
+        right: -15%;
+      }
     }
   }
   &--wrapper {
@@ -40,7 +52,7 @@
   .timeline--content{
     max-width: 860px;
     margin: 0 auto;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 992px) {
       max-width: 760px;
     }
     .timeline--info {

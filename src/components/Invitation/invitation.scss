@@ -18,17 +18,19 @@
       
     }
     &:nth-child(1){
-      left: -17%;
-      transform: rotate(226deg);
+      left: -10%;
+      // transform: rotate(226deg);
+      transform: rotate(175deg);
       @media screen and (max-width: 1200px) {
-        left: -23%;
+        left: -15%;
       }
     }
     &:nth-child(2){
-      right: -15%;
-      transform: rotate(215deg);
+      right: -10%;
+      // transform: rotate(215deg);
+      transform: rotate(275deg);
       @media screen and (max-width: 1200px) {
-        right: -20%;
+        right: -15%;
       }
     }
   }
