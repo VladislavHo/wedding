@@ -10,11 +10,21 @@
       width: 600px;
       height: 600px;
     }
+    @media screen and (max-width: 992px) {
+      left: -60%;
+      rotate: 90deg;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
   &--wrapper {
     max-width: 1680px;
     margin: 0 auto;
     padding: 60px 0;
+    @media screen and (max-width: 992px) {
+      padding: 43px 20px;
+    }
     border-bottom: 2px solid #d9d9d9;
     p.dress_code--text {
       max-width: 840px;
@@ -28,6 +38,9 @@
       @media screen and (max-width: 1280px) {
         font-size: 18px;
         
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
       }
     }
   
@@ -119,11 +132,22 @@
       justify-content: space-between;
       align-items: center;
       gap: 20px;
-
+      @media screen and (max-width: 992px) {
+        max-width: 520px;
+      }
+      @media screen and (max-width: 768px) {
+     
+        justify-content: center;
+        flex-wrap: wrap;
+      }
       .color {
         width: 60px;
         height: 60px;
         border-radius: 50%;
+        @media screen and (max-width: 768px) {
+          width: 43px;
+          height: 43px;
+        }
       }
     }
 
@@ -155,6 +179,18 @@
         max-width: 800px;
         gap: 40px;
       }
+      @media screen and (max-width: 992px) {
+        max-width: 520px;
+      }
+      @media screen and (max-width: 560px) {
+        max-width: 330px;
+      }
+      img{
+        @media screen and (max-width: 992px) {
+          width: 144px;
+          height: 215px;
+        }
+      }
     }
 
   }
@@ -167,4 +203,10 @@
   min-height: 1152px;
   overflow: hidden;
   display: flex;
+  @media screen and (max-width: 992px) {
+    min-height: 918px;
+  }
+  @media screen and (max-width: 560px) {
+    min-height: 1300px;
+  }
 }

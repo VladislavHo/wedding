@@ -45,7 +45,7 @@ function App() {
   return (
     <>
 
-      {/* {<Overlay activeOverlay={activeOverlay} setActiveOverlay={setActiveOverlay} />} */}
+      {<Overlay activeOverlay={activeOverlay} setActiveOverlay={setActiveOverlay} />}
 
       <Intro activeOverlay={activeOverlay} />
 

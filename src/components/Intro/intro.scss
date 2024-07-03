@@ -29,6 +29,11 @@
         padding-bottom: 10px;
       }
 
+      @media screen and (max-width: 768px) {
+        font-size: 48px;
+        
+      }
+
     }
 
     p {
@@ -42,7 +47,10 @@
       @media screen and (max-width: 1200px) {
         font-size: 40px;
       }
- 
+      
+      @media screen and (max-width: 768px) {
+        font-size: 36px;
+      }
     }
 
     button {

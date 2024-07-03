@@ -32,13 +32,20 @@
 
     .overlay--wrapper {
       display: flex;
-      flex-direction: column;
+      flex-direction: column; 
 
       h3 {
         font-family: var(--font-family);
         font-weight: 400;
         font-size: 64px;
         color: #fff;
+        @media screen and (max-width: 1200px) {
+          font-size: 50px;
+          
+        }
+        @media screen and (max-width: 768px) {
+          font-size: 32px;
+        }
       }
 
       .logo {
@@ -47,6 +54,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+
 
         &::before,
         &::after {
@@ -58,6 +67,9 @@
           height: 2px;
           background-color: #ffffff;
           z-index: -1;
+          @media screen and (max-width: 768px) {
+            height: 1px;
+          }
         }
 
         &::before {
@@ -71,6 +83,10 @@
         img {
           width: 70px;
           height: 70px;
+
+          @media screen and (max-width: 768px) {
+            width: 50px;
+            height: 50px;}
         }
       }
 
@@ -94,6 +110,20 @@
           background: #9369b8;
           outline: 1px solid #9369b8;
           transition: .5s ease;
+
+          @media screen and (max-width: 992px) {
+            font-size: 30px;
+            
+          }
+
+          @media screen and (max-width: 768px) {
+            font-size: 24px;
+            padding: 15px 44px;
+            img{
+              width: 24px;
+              height: 24px;
+            }
+          }
 
           &:hover {
             background: #7f5b9f;
