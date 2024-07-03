@@ -20,7 +20,7 @@ const YMa2 = () => {
         width="100%"
         height="100%"
         // allowFullScreen
-        style={{ position: 'relative' }}
+        style={{ position: 'relative', border: "none", outline:"none" }}
       ></iframe>
     </div>
   );

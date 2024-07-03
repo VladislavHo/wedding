@@ -144,11 +144,12 @@
       }
       @media screen and (max-width: 992px) {
         max-width: 520px;
+        justify-content: center;
+        flex-wrap: wrap;
       }
       @media screen and (max-width: 768px) {
      
-        justify-content: center;
-        flex-wrap: wrap;
+     
       }
       .color {
         width: 60px;
