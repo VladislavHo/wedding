@@ -7,9 +7,9 @@ export default function TImelineWrapper({ ...props }) {
 
   const { id, title, description, map, svg_name, line } = props
   const [isAvtive, setIsActive] = useState(false)
+  const [activeButton, setActiveButton] = useState(false)
 
-
-  const { ref, inView  } = useInView({
+  const { ref, inView } = useInView({
     threshold: 0.5
   });
 
@@ -22,10 +22,16 @@ export default function TImelineWrapper({ ...props }) {
   }, [inView, isAvtive])
 
 
+  useEffect(() => {
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isMobile = /mobile|iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(userAgent);
+    setActiveButton(isMobile)
+  }, [])
+
 
   return (
     <>
-      <div  className={`timeline--info ${isAvtive ? 'active' : ''}`} ref={ref}>
+      <div className={`timeline--info ${isAvtive ? 'active' : ''}`} ref={ref}>
 
         <div className="timeline--info-line">
 
@@ -37,24 +43,52 @@ export default function TImelineWrapper({ ...props }) {
         <div className="timeline--info-time">
           <h4>{title}</h4>
           {description.map((item: string, index: number) => <p key={index}>{item}</p>)}
-          {map && <div className="timeline--info-time-map">
-            {id === 1 ? 
-              <YMaps>
-                <Map
-                  defaultState={{ center: [59.934014, 30.293828], zoom: 17 }}
-                  width='100%'
-                  height='100%'
-                >
-                </Map>
-              </YMaps> : 
-              <YMaps>
-                <Map
-                  defaultState={{ center: [59.944449, 30.364449], zoom: 17 }}
-                  width='100%'
-                  height='100%'
-                >
-                </Map>
-              </YMaps>
+          {map && <div className="">
+
+            {id === 1 ?
+              <>
+                <div className="map--wrapper">
+                  <div className="timeline--info-time-map">
+                    <YMaps>
+                      <Map
+                        defaultState={{ center: [59.934014, 30.293828], zoom: 17 }}
+                        width='100%'
+                        height='100%'
+                      >
+                      </Map>
+
+                    </YMaps>
+                  </div>
+                  {activeButton && <button>Построить маршрут</button>}
+
+                </div>
+
+
+
+
+              </>
+              :
+              <>
+                <div className="map--wrapper">
+                  <div className="timeline--info-time-map">
+                    <YMaps>
+                      <Map
+                        defaultState={{ center: [59.944449, 30.364449], zoom: 17 }}
+                        width='100%'
+                        height='100%'
+                      >
+                      </Map>
+                    </YMaps>
+                  </div>
+                  {activeButton && <button>Построить маршрут</button>}
+                </div>
+
+
+
+
+
+              </>
+
             }
           </div>}
 
