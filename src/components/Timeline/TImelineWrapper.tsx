@@ -1,8 +1,11 @@
 import './timeline.scss'
-import { YMaps, Map } from '@pbe/react-yandex-maps';
+
 import { useEffect, useState } from 'react';
-// import React from 'react';
+
 import { useInView } from "react-intersection-observer";
+
+import YMap1 from '../YMap/YMap1';
+import YMap2 from '../YMap/YMap2';
 export default function TImelineWrapper({ ...props }) {
 
   const { id, title, description, map, svg_name, line } = props
@@ -12,7 +15,6 @@ export default function TImelineWrapper({ ...props }) {
   const { ref, inView } = useInView({
     threshold: 0.5
   });
-
 
   useEffect(() => {
     if (isAvtive || inView) {
@@ -27,6 +29,7 @@ export default function TImelineWrapper({ ...props }) {
     const isMobile = /mobile|iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(userAgent);
     setActiveButton(isMobile)
   }, [])
+
 
 
   return (
@@ -49,46 +52,24 @@ export default function TImelineWrapper({ ...props }) {
               <>
                 <div className="map--wrapper">
                   <div className="timeline--info-time-map">
-                    <YMaps>
-                      <Map
-                        defaultState={{ center: [59.934014, 30.293828], zoom: 17 }}
-                        width='100%'
-                        height='100%'
-                      >
-                      </Map>
-
-                    </YMaps>
+    
+                    <YMap1></YMap1>
                   </div>
                   {activeButton && <button>Построить маршрут</button>}
 
                 </div>
-
-
-
 
               </>
               :
               <>
                 <div className="map--wrapper">
                   <div className="timeline--info-time-map">
-                    <YMaps>
-                      <Map
-                        defaultState={{ center: [59.944449, 30.364449], zoom: 17 }}
-                        width='100%'
-                        height='100%'
-                      >
-                      </Map>
-                    </YMaps>
+                    <YMap2></YMap2>
                   </div>
                   {activeButton && <button>Построить маршрут</button>}
                 </div>
 
-
-
-
-
               </>
-
             }
           </div>}
 

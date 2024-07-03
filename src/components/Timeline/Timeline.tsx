@@ -2,15 +2,6 @@ import TImelineWrapper from './TImelineWrapper'
 import './timeline.scss'
 
 
-// interface ITimeInfo{
-//   id: number
-//   title: string
-//   description: string[]
-//   map: boolean
-//   svg_name: string
-// }
-
-
 const timeline_info = [
   {
     id: 1,
@@ -65,10 +56,6 @@ const timeline_info = [
 
 ]
 export default function Timeline() {
-
-
-
-
 
   return (
     <section id='timeline' className="timeline">

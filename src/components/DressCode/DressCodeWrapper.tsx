@@ -9,7 +9,7 @@ function DressCodeWrapper( {isMen, ...props}:DressCodeWrapperProps) {
   const { color, imgName, description } = props
   return (
     <div className={`dress_code--info ${isMen ? 'active' : ''}`}>
-      <div className="color--list">
+      <div className={`color--list ${isMen ? 'men' : 'women'}`}>
         {color.map((item: string, index: number) =>
           <div
             key={index}

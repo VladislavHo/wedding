@@ -37,6 +37,7 @@
     &:nth-child(1) {
       left: -25%;
       transform: rotate(143deg);
+
       @media screen and (max-width: 1200px) {
         left: -30%;
 
@@ -71,6 +72,12 @@
     // @media screen and (max-width: 768px) {
     //   max-width: 344px;
     // }
+    height: 600px;
+
+    &.active {
+      height: auto;
+      border-bottom: 2px solid #d9d9d9;
+    }
   }
 
   &--btn {
@@ -96,7 +103,8 @@
     }
 
     &.active {
-
+      // position: absolute;
+      // left: calc(50% - 100px);
       height: auto;
       opacity: 1;
       transition: .5s ease-in-out;

@@ -25,7 +25,7 @@ export default function Presence() {
     <section id="presence" className="presence">
       <img src="./img/branch.png" alt="img" />
       <img src="./img/branch.png" alt="img" />
-      <div className="presence--wrapper">
+      <div className={`presence--wrapper ${presentState.stateForm ? "active" : ""}`}>
         {/* <h2>Подтведить присутствие</h2> */}
         <h2>{
           !presentState.presentYes ?
