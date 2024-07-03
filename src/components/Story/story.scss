@@ -9,6 +9,9 @@
   &-wrapper {
     &--couples {
       padding-bottom: 60px;
+      @media screen and (max-width: 768px) {
+        padding-bottom: 43px;
+      }
       p {
         font-family: var(--font-family);
         font-weight: 400;

@@ -2,7 +2,7 @@
 
 const YMa2 = () => {
   return (
-    <div style={{ position: 'relative', overflow: 'hidden' }}>
+    <div style={{ position: 'relative', overflow: 'hidden', border: "none", width: "100%", height: "100%" }}>
       <a
         href="https://yandex.by/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
         style={{ color: '#eee', fontSize: '12px', position: 'absolute', top: '0px' }}

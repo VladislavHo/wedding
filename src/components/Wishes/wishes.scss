@@ -15,7 +15,10 @@
     display: flex;
     flex-direction: column;
     gap: 60px;
-
+    @media screen and (max-width: 768px) {
+      gap: 43px;
+      
+    }
     
     &--card {
       display: flex;
@@ -26,6 +29,10 @@
         flex-direction: column-reverse;
         gap: 43px;
       }
+      @media screen and (max-width: 480px) {
+        gap: 30px;
+        
+      }
     }
 
     &--card-bg {
@@ -34,6 +41,11 @@
        
           max-width: 344px;
           height: 344px;
+        }
+        @media screen and (max-width: 480px) {
+          max-width: 300px;
+          height: 300px;
+          
         }
       }
     }
