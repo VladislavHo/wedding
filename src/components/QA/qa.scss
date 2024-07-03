@@ -5,14 +5,26 @@
   margin-bottom: 60px;
 
   border-bottom: 2px solid #d9d9d9;
-
+  @media screen and (max-width: 768px) {
+    max-width: 344px;
+  }
   &--wrapper {
    
     margin: 0 auto;
     display: flex;
     justify-content: center;
     gap: 54px;
-    .qa-bg {}
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    .qa-bg {
+      display: block;
+      @media screen and (max-width: 768px) {
+        display: none;
+        
+      }
+    }
 
     .qa--info {
 
@@ -24,6 +36,11 @@
         @media screen and (max-width: 1200px) {
           font-size: 36px;
         }
+        @media screen and (max-width: 768px) {
+          font-size: 32px;
+          text-align: center;
+          padding-bottom: 24px;
+        }
       }
 
       .connection {
@@ -33,6 +50,10 @@
         padding: 25px 0 56px;
         // justify-content: space-between;
         // max-width: 550px;
+        @media screen and (max-width: 768px) {
+          justify-content: space-evenly;
+          padding: 0;
+        }
         a {
           font-family: var(--third-family);
           font-weight: 400;
@@ -40,6 +61,7 @@
           line-height: 200%;
           text-align: center;
           color: #9369b8;
+
         }
 
         .social-network--link {
@@ -52,6 +74,10 @@
             border-radius: 50%;
             background-color: #9369b8;
             transition: .5s ease-in-out;
+            @media screen and (max-width: 768px) {
+            width: 28px;
+            height: 28px;
+            }
             &:hover{
               background-color: #7f5b9f;
               transition: .5s ease-in-out;
@@ -69,24 +95,51 @@
             img{
               width: 30px;
               height: 30px;
+              @media screen and (max-width: 768px) {
+                width: 20px;
+                height: 20px;
+                
+              }
             }
           }
           .tg{
             img{
               width: 25px;
               height: 25px;
+              @media screen and (max-width: 768px) {
+                width: 18px;
+                height: 18px;
+                
+              }
             }
           }
           .wa{
             img{
               width: 25px;
               height: 25px;
+              @media screen and (max-width: 768px) {
+                width: 18px;
+                height: 18px;
+                
+              }
             }
           }
 
         }
       }
-
+      .qa-bg--mobile{
+        display: none;
+        @media screen and (max-width: 768px) {
+          display: flex;
+          justify-content: center;
+          padding: 44px 0;
+          img{
+            width: 258px;
+            height: 258px;
+          }
+          
+        }
+      }
       .qa--text {
         max-width: 610px;
         p {
@@ -98,6 +151,10 @@
           @media screen and (max-width: 1200px) {
             font-size: 18px;
             
+          }
+          @media screen and (max-width: 768px) {
+            font-size: 16px;
+            text-align: center;
           }
         }
 

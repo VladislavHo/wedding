@@ -3,6 +3,9 @@
   margin: 0;
   padding: 60px 0 60px;
   position: relative;
+  @media screen and (max-width: 768px) {
+    padding: 43px 5px;
+  }
   &--img {
     width: 500px;
     height: 500px;
@@ -25,6 +28,10 @@
     font-size: 40px;
     text-align: center;
     color: #9369b8;
+    padding: 0;
+    @media screen and (max-width: 768px) {
+      font-size: 32px;
+    }
   }
 
   &--info {
@@ -35,6 +42,9 @@
       max-width: 720px;
       padding: 50px 0;
       
+    }
+    @media screen and (max-width: 768px) {
+      padding: 40px 20px;
     }
 
     p {
@@ -48,6 +58,9 @@
         font-size: 18px;
         
       }
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+      }
     }
   }
 
@@ -58,20 +71,26 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-
+    @media screen and (max-width: 768px) {
+      max-width: 360px;
+    }
     .link {
-      width: 240px;
-      height: 60px;
-
+      // width: 240px;
+      // height: 60px;
+      
       a {
         border-radius: 30px;
+        // padding: 5px 43px;
         width: 240px;
         height: 60px;
-
         display: flex;
         align-items: center;
         justify-content: center;
         text-decoration: none;
+        @media screen and (max-width: 768px) {
+         width: 172px;
+         height: 43px;
+        }
 
         h6 {
           font-family: var(--font-family);
@@ -80,9 +99,14 @@
           line-height: 240%;
           text-align: center;
           color: #fff;
+
+          @media screen and (max-width: 768px) {
+            font-size: 16px;
+          }
         }
 
         &.vk--link {
+
           background: #9369b8;
           transition: .5s ease-in-out;
           &:hover {
@@ -90,9 +114,17 @@
             
             transition: .5s ease-in-out;
           }
+          img{
+            @media screen and (max-width: 768px) {
+              width: 34px;
+              height: 34px;
+            }
+ 
+          }
         }
         
         &.inst--link {
+          // padding: 5px 43px;
           background: #fb84ee;
           gap: 10px;
           transition: .5s ease-in-out;
@@ -100,6 +132,10 @@
             background-color: #dc77d1;
 
             transition: .5s ease-in-out;
+          }
+          img{
+            width: 22px;
+            height: 22px;
           }
         }
       }
@@ -111,6 +147,9 @@
         font-size: 12px;
         text-align: center;
         color: #616161;
+        @media screen and (max-width: 768px) {
+          font-size: 10px;
+        }
       }
     }
   }
