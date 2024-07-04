@@ -1,11 +1,13 @@
 .dress_code {
   width: 100%;
   position: relative;
-  &--img {
+  svg {
     position: absolute;
     bottom: 0;
     left: -33%;
     rotate: 180deg;
+    width: 700px;
+    height: 700px;
     @media screen and (min-width: 1920px) {
         left: -500px;
         rotate: 152deg;

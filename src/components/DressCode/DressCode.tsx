@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './dress-code.scss'
 import DressCodeWrapper from './DressCodeWrapper'
+import BranchSVG from '../SVG/branchSVG'
+import { COLOR } from '../../var/var'
 
 
 const dressCodeInfo = [
@@ -27,7 +29,7 @@ export default function DressCode() {
   const [isMen, setIsMen] = useState(false)
   return (
     <section id='dress_code' className="dress_code">
-      <img className='dress_code--img' src="./img/branch-2.png" alt="img" />
+      <BranchSVG color={COLOR.branchSilver}/>
       <div className="dress_code--wrapper">
         <h2>Дресс-код</h2>
         <p className='dress_code--text'>Мы очень стараемся сделать наш праздник красивым и интересным!Безусловно, присутствие таких классных и красивых людей автоматически делает праздник прекрасным. Но мы были бы очень рады, если каждый внёс бы свою лепту и поддержал цветовую гамму нашей свадьбы:</p>

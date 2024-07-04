@@ -1,6 +1,8 @@
 import { useState } from "react"
 import "./presence.scss"
 import Confirm from "./Confirm"
+import BranchSVG from "../SVG/branchSVG"
+import { COLOR } from "../../var/var"
 
 export default function Presence() {
   const [presentState, setPresentState] = useState({
@@ -23,8 +25,10 @@ export default function Presence() {
 
   return (
     <section id="presence" className="presence">
-      <img src="./img/branch.png" alt="img" />
-      <img src="./img/branch.png" alt="img" />
+      {/* <img src="./img/branch.png" alt="img" />
+      <img src="./img/branch.png" alt="img" /> */}
+      <BranchSVG color ={COLOR.branchSilver} />
+      <BranchSVG color ={COLOR.branchSilver} />
       <div className={`presence--wrapper ${presentState.stateForm ? "active" : ""}`}>
         {/* <h2>Подтведить присутствие</h2> */}
         <h2>{

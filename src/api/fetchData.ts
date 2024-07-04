@@ -8,11 +8,12 @@ interface FetchDataProps {
     id: string;
     label: string;
     active: boolean;
-  }
+  },
+  name: string
 }
 
 
-async function fetchData({ options, textArea }: FetchDataProps) {
+async function fetchData({ options, textArea, name }: FetchDataProps) {
   console.log(options, textArea);
 
   const responce = await fetch("#",
@@ -20,7 +21,8 @@ async function fetchData({ options, textArea }: FetchDataProps) {
       method: "POST",
       body: JSON.stringify({
         label: options.label,
-        text: textArea
+        text: textArea,
+        name
       })
     }
   )

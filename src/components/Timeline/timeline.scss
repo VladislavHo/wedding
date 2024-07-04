@@ -2,10 +2,11 @@
   width: 100%;
   position: relative;
 
-  &--img {
+  svg {
     position: absolute;
     z-index: -1;
-
+    width: 700px;
+    height: 700px;
     @media screen and (max-width: 1200px) {
       // width: 600px;
       // height: 600px;
@@ -24,6 +25,7 @@
     }
 
     &:nth-child(1) {
+      
       top: 0;
       left: -600px;
       transform: rotate(-3deg);

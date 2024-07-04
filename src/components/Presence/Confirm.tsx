@@ -63,7 +63,7 @@ export default function Confirm({ presentState, setPresentState }: PresenceProps
               stateForm: false,
               button: false
             }));
-          fetchData({ options: optionsLabel.filter((el) => el.active === true)[0], textArea: textArea.y })
+          fetchData({ options: optionsLabel.filter((el) => el.active === true)[0], textArea: textArea.y, name: "Даня" })
         }}>
 
 
@@ -110,10 +110,16 @@ export default function Confirm({ presentState, setPresentState }: PresenceProps
               stateForm: false,
               button: false
             }));
-            fetchData({ options: { id: '', label: 'Не придет', active: false }, textArea: textArea.n })
+          fetchData({ options: { id: '', label: 'Не придет', active: false }, textArea: textArea.n, name: "Даня" })
         }}>
           <div className="textarea-wrapper">
-            <textarea required name="" value={textArea.n} onChange={(e) => setTextArea((prev) => ({ ...prev, n: e.target.value }))} id="" placeholder='По какой причине не сможете присутствовать?'></textarea>
+            <textarea
+              required
+              name=""
+              value={textArea.n}
+              onChange={(e) => setTextArea((prev) => ({ ...prev, n: e.target.value }))}
+              id=""
+              placeholder='По какой причине не сможете присутствовать?'></textarea>
 
           </div>
 

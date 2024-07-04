@@ -1,8 +1,11 @@
+import { COLOR } from '../../var/var'
+import BranchSVG from '../SVG/branchSVG'
 import './hashtag.scss'
 export default function Hashtag() {
   return (
     <section id='hashtag' className="hashtag">
-      <img className='hashtag--img' src="./img/branch-2.png" alt="img" />
+      {/* <img className='hashtag--img' src="./img/branch-2.png" alt="img" /> */}
+      <BranchSVG color={COLOR.branchSilver}/>
       <h2>#AHAHAHAHHAHAHA:(</h2>
       <div className="hashtag--info">
         <p>Делитесь фотографиями, рилсами и любыми другими лучшими моментами в социальных сетях, добавляя этот хештег!</p>

@@ -1,9 +1,12 @@
+import { COLOR } from '../../var/var'
+import BranchSVG from '../SVG/branchSVG'
 import './invitation.scss'
 export default function Invitation() {
   return (
     <section id='invitation' className='invitation'>
-      <img src="./img/branch.png" alt="img" />
-      <img src="./img/branch.png" alt="img" />
+      <BranchSVG color={COLOR.branchViolet} />
+      <BranchSVG color={COLOR.branchViolet} />
+
       <h2>Кажется, свадьба намечается...</h2>
       <div className="invitation-wrapper">
         <h4>Дорогой, Даня!</h4>

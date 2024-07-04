@@ -1,3 +1,5 @@
+import { COLOR } from '../../var/var'
+import BranchSVG from '../SVG/branchSVG'
 import TImelineWrapper from './TImelineWrapper'
 import './timeline.scss'
 
@@ -59,8 +61,12 @@ export default function Timeline() {
 
   return (
     <section id='timeline' className="timeline">
-      <img className='timeline--img' src="./img/branch-2.png" alt="img" />
-      <img className='timeline--img' src="./img/branch-2.png" alt="img" />
+      {/* <img className='timeline--img' src="./img/branch-2.png" alt="img" />
+      <img className='timeline--img' src="./img/branch-2.png" alt="img" /> */}
+      <BranchSVG color={COLOR.branchSilver} />
+
+      <BranchSVG color={COLOR.branchSilver} />
+
       <div className="timeline--wrapper">
         <h2>Программа свадебного дня</h2>
         <div className="timeline--content">
