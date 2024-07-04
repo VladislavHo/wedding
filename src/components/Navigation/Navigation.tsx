@@ -1,6 +1,8 @@
 import { useState } from 'react';
 
 import './navigation.scss'
+import BranchSVG from '../SVG/branchSVG';
+import { COLOR } from '../../var/var';
 
 
 interface NavigationItem {
@@ -65,7 +67,8 @@ export default function Navigation() {
 
   return (
     <section id="navigation" className="navigation">
-      <img src="./img/branch-2.png" alt="img" />
+      {/* <img src="./img/branch-2.png" alt="img" /> */}
+      <BranchSVG color={COLOR.branchSilver} />
       <h2>Навигация</h2>
       <ul>
         {navigation.map((item) => (

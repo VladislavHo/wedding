@@ -7,27 +7,28 @@
     padding: 43px 50px 43px;
   }
 
-  img {
+  svg {
     width: 400px;
+    height: 400px;
     position: absolute;
     display: none;
-    rotate: 192deg;
+    rotate: 56deg;
 
     @media screen and (max-width: 992px) {
       display: block;
-      right: -23%;
+      right: -250px;
     }
 
     @media screen and (max-width: 768px) {
-      right: -32%;
+      // right: -32%;
     }
 
     @media screen and (max-width: 480px) {
-      right: -50%;
+      // right: -50%;
     }
 
     @media screen and (max-width: 360px) {
-      right: -70%;
+      // right: -70%;
 
     }
   }
