@@ -12,10 +12,10 @@
     position: absolute;
     top: 0;
     right: -14%;
-    rotate: 226deg;
+    rotate: 180deg;
     z-index: -1;
     @media screen and (min-width: 1200px) {
-      right: -7%;
+      right: -270px;
     }
     @media screen and (max-width: 1280px) {
       width: 400px;

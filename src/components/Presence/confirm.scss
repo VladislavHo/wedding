@@ -97,10 +97,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 60px;  
+      padding-top: 120px;
       margin-bottom: 43px;
       @media  screen and (max-width: 380px) {
-        padding-top: 30px;
+        padding-top: 60px;
         flex-direction: column;
         gap: 15px;
       }
